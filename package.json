@@ -1,0 +1,41 @@
+{
+  "name": "nio-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "serve": "webpack-dev-server",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.24.0",
+    "jest": "^15.1.1",
+    "node-sass": "^3.8.0",
+    "react-test-renderer": "^15.3.1",
+    "sass-loader": "^4.0.1",
+    "socketio": "^1.0.0",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "chart.js": "^1.1.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "immutable": "^3.8.1",
+    "niojs": "^1.1.5",
+    "react": "^15.3.1",
+    "react-addons-test-utils": "^15.3.1",
+    "react-chartjs": "^0.8.0",
+    "react-dom": "^15.3.1"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/preprocessor.js",
+    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
+  }
+}

@@ -1,0 +1,203 @@
+$root-color: #2c3e50;
+$theme-color: #34495e;
+$accent-color: #27ae60;
+$gender-colors: (
+  default: #27ae60,
+  male: #3498db,
+  female: #E26A6A
+);
+$base-padding: 1rem;
+$base-margin: 1rem;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  background: $root-color;
+  font-family: 'Open Sans';
+}
+
+.app-wrapper {
+  background: darken($theme-color, 10%);
+  border: 1px solid darken($theme-color, 15%);
+  border-radius: 4px;
+  display: flex;
+  height: 30rem;
+  left: calc(50% - 35rem);
+  opacity: 1;
+  position: absolute;
+  top: calc(50% - 15rem);
+  width: 70rem;
+}
+
+.sale-wrapper {
+  border-right: 1px solid darken($theme-color, 25%);
+  height: 100%;
+  position: relative;
+  width: 50%;
+}
+
+.sale-header,
+.stats-header {
+  color: #eee;
+  font-size: 1.8em;
+  font-weight: bold;
+  padding: $base-padding / 2;
+  text-align: center;
+}
+
+.stats-wrapper {
+  position: relative;
+  width: 50%;
+}
+
+.shopper {
+  color: #eee;
+  padding: $base-padding;
+  position: relative;
+}
+
+.shopper-icon,
+.shopper-name,
+.shopper-gender {
+  margin-left: .25rem;
+}
+
+[data-gender] {
+  color: map-get($gender-colors, default);
+}
+
+[data-gender='male'] {
+  color: map-get($gender-colors, male);
+}
+
+[data-gender='female'] {
+  color: map-get($gender-colors, female);
+}
+
+
+.shopper-name {
+  font-size: 1.4rem;
+}
+
+.tooltip {
+  background: darken($theme-color, 20%);
+  border-radius: 4px;
+  bottom: 70%;
+  box-shadow: 0 0 .1em darken($theme-color, 10%);
+  font-size: .8em;
+  left: 3em;
+  padding: .2em;
+  position: absolute;
+}
+
+[data-visibility='none'] {
+  display: none;
+}
+
+[data-visibility='block'] {
+  display: block;
+}
+
+
+.total-amount {
+  background: $accent-color;
+  border-radius: .25em;
+  min-width: 8em;
+  padding: $base-padding / 2;
+  position: absolute;
+  right: 1em;
+  text-align: right;
+  top: 1em;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  padding: $base-padding;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  &:first-of-type {
+    font-weight: bold;
+  }
+  &:nth-of-type(odd) {
+    background: lighten($theme-color, 15%);
+    &:hover {
+      background: lighten($theme-color, 33%);
+    }
+  }
+  &:nth-of-type(even) {
+    background: lighten($theme-color, 10%);
+    &:hover {
+      background: lighten($theme-color, 33%);
+    }
+  }
+  &:last-of-type {
+    border-bottom: 1px solid darken($theme-color, 20%);
+  }
+}
+
+
+.cart-item-value {
+  justify-content: center;
+  border-right: 1px solid darken($theme-color, 20%);
+  display: flex;
+  margin: 0 .25rem;
+  padding: $base-padding / 2;
+  text-align: center;
+  width: 33%;
+  &:last-of-type {
+    border: 0;
+  }
+
+  span, i {
+    flex-direction: row;
+    flex: 3 0;
+    text-align: center;
+  }
+  i {
+    cursor: pointer;
+  }
+}
+
+.line-chart {
+  border: 1px solid darken($theme-color, 15%);
+  background: lighten($theme-color, 5%);
+  margin: $base-margin;
+  padding: $base-padding;
+  div {
+    text-align: right;
+  }
+}
+
+text {
+  stroke: #fff;
+}
+
+path {
+  stroke: $accent-color;
+  stroke-width: 1;
+  fill: none;
+}
+
+.male-amounts {
+  stroke: map-get($gender-colors, male);
+}
+
+.female-amounts {
+  stroke: map-get($gender-colors, female);
+}
+
+.male-summary {
+  color: map-get($gender-colors, male);
+}
+
+.female-summary {
+  color: map-get($gender-colors, female);
+}
