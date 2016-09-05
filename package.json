@@ -1,5 +1,5 @@
 {
-  "name": "nio-exercise",
+  "name": "@emmaramirez/nio-exercise",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -24,17 +24,15 @@
     "webpack": "^1.13.2"
   },
   "dependencies": {
-    "chart.js": "^1.1.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "immutable": "^3.8.1",
     "niojs": "^1.1.5",
     "react": "^15.3.1",
     "react-addons-test-utils": "^15.3.1",
-    "react-chartjs": "^0.8.0",
     "react-dom": "^15.3.1"
   },
   "jest": {
-    "scriptPreprocessor": "<rootDir>/preprocessor.js",
+    "scriptPreprocessor": "<rootDir>/__tests__/config/preprocessor.js",
     "moduleFileExtensions": ["ts", "tsx", "js"],
     "testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
   }
