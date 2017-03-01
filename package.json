@@ -12,19 +12,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "css-loader": "^0.24.0",
-    "jest": "^15.1.1",
-    "node-sass": "^3.8.0",
+    "css-loader": "^0.26.2",
+    "jest": "^19.0.2",
+    "node-sass": "^4.5.0",
     "react-test-renderer": "^15.3.1",
-    "sass-loader": "^4.0.1",
+    "sass-loader": "^6.0.2",
     "socketio": "^1.0.0",
     "style-loader": "^0.13.1",
-    "ts-loader": "^0.8.2",
-    "typescript": "^1.8.10",
-    "webpack": "^1.13.2"
+    "ts-loader": "^2.0.1",
+    "typescript": "^2.2.1",
+    "webpack": "^2.2.1"
   },
   "dependencies": {
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.0.0",
     "immutable": "^3.8.1",
     "niojs": "^1.1.5",
     "react": "^15.3.1",
