@@ -1,5 +1,7 @@
 # nio Front-End Exercise
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/EmmaRamirez/nio-exercise.svg)](https://greenkeeper.io/)
+
 Hi!
 
 To run this evaluation, just run:
